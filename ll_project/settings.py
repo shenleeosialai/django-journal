@@ -161,3 +161,5 @@ if config.is_valid_platform():
                 'PORT': db_settings['port'],
                 },
             }
+
+STATIC_ROOT = BASE_DIR / 'static'

@@ -1,4 +1,6 @@
 {% extends 'learning_logs/base.html' %}
+{% load static %}
+
 
 {% block page_header %}
   <head><script src="../assets/js/color-modes.js"></script>
@@ -65,7 +67,7 @@
       }
 
       .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
+        --bd-violet-bg: #123c69;
         --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
         --bs-btn-font-weight: 600;
@@ -73,12 +75,12 @@
         --bs-btn-bg: var(--bd-violet-bg);
         --bs-btn-border-color: var(--bd-violet-bg);
         --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-hover-bg: #123c69;
+        --bs-btn-hover-border-color: #123c69;
         --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
         --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
+        --bs-btn-active-bg: #123c69;
+        --bs-btn-active-border-color: #123c69;
       }
 
       .bd-mode-toggle {
@@ -88,12 +90,27 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+      .bg-EDC7B7 {
+        background-color: #FFE400;
+      }
+      .bg-050A44 {
+        background-color: #050A44;
+      }
+      .bg-E64833 {
+        background-color: #E64833 !important;
+      }
+      .bg-E64398 {
+        background-color: #800020;
+      }
+      .bg-10E7DC {
+        background-color: #10E7DC;
+      }
     </style>
 
     
   </head>
-  <body class="bg-dark text-white">
-    <div class="p-3 mb-4 bg-dark text-white border rounded-3">
+  <body class="bg-EDC7B7 text-black">
+    <div class="p-3 mb-4 bg-050A44 text-white border rounded-3">
       <div class="container-fluid py-4">
         <h1 class="display-3">Track your thoughts.</h1>
         
@@ -106,7 +123,7 @@
       </div>
     </div>
 
-<main class="container py-5  bg-dark text-white">
+<main class="container py-5  bg-050A44 text-white border rounded-3 ">
   <h1>Why choose Jarida</h1>
   <p class="lead">Its a secure platform that you can access anywhere and at anytime.</p>
 
@@ -117,15 +134,15 @@
   <div class="row" data-masonry='{"percentPosition": true }'>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="card">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="https://commons.wikimedia.org/wiki/File:Las_48_Leyes_del_Poder_cover.svg#/media/File:Las_48_Leyes_del_Poder_cover.svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-        <div class="card-body">
+        <img class="card-img-top" src="{% static 'images/power.png' %}" alt="48 Laws of Power" width="100%" height="200">
+        <div class="card-body bg-10E7DC">
           <h5 class="card-title">From the 48 laws of power(Law 16)</h5>
           <p class="card-text">Too much circulation makes the price go down.The more you are seen and heard from,the more common you appear</p>
         </div>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card p-3">
+      <div class="card p-3 bg-10E7DC">
         <figure class="p-3 mb-0">
           <blockquote class="blockquote">
             <p>If you are inconsistent in your feelings,you will lose dignity and trust</p>
@@ -137,8 +154,8 @@
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card">
-        <img class="card-img-top" src="img/untitled.jpg" alt="Image of Italy" width="100%" height="200">
+      <div class="card bg-10E7DC">
+        <img class="card-img-top" src="{% static 'images/italy.jpg' %}" alt="Image of Italy" width="100%" height="200">
         <div class="card-body">
           <h5 class="card-title">Italy</h5>
           <p class="card-text">Beautiful scenery in Italy during summer</p>
@@ -148,13 +165,13 @@
     </div>
     
     <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card text-bg-primary text-center p-3">
+      <div class="card text-bg-10E7DC text-center p-3 bg-10E7DC">
         <figure class="mb-0">
           <blockquote class="blockquote">
             <p>Dont try to be perfect
               ,Do try to be better.</p>
           </blockquote>
-          <figcaption class="blockquote-footer mb-0 text-white">
+          <figcaption class="blockquote-footer mb-0 text-black">
             from <cite title="Source Title">Shen lee osialai</cite>
           </figcaption>
         </figure>
@@ -162,7 +179,7 @@
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="card text-center">
-        <div class="card-body">
+        <div class="card-body bg-10E7DC">
           <h5 class="card-title">Favorite music</h5>
           <p class="card-text">Summer love.</p>
           <p class="card-text"><small class="text-body-secondary"></small></p>
@@ -170,12 +187,12 @@
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card">
-        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Beautiful</text></svg>
+      <div class="card bg-10E7DC">
+        <img class="card-img-top" src="{% static 'images/kitty.jpg' %}" alt="48 Laws of Power" width="100%" height="200">
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card p-3 text-end">
+      <div class="card p-3 text-end bg-10E7DC">
         <figure class="mb-0">
           <blockquote class="blockquote">
             <p>You got this!</p>
@@ -187,7 +204,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card">
+      <div class="card bg-10E7DC">
         <div class="card-body">
           <h5 class="card-title">A Thousand Splendid Suns</h5>
           <p class="card-text">Story of afghan women and the challanges they go through.</p>
@@ -197,35 +214,35 @@
     </div>
   </div>
   
-  <div class="container my-5 bg-">
-    <div class="p-5 text-center bg-body-tertiary rounded-3 bg-dark">
-      <svg class="bi mt-4 mb-3" style="color: var(--bs-black);" width="100" height="100" ><use xlink:href="#bootstrap"/></svg>
-      <h1 class="text-body-emphasis">GET STARTED</h1>
-      <p class="col-lg-8 mx-auto fs-5 text-muted">
-        Make the first step to<code> clear your mind </code>; happy journaling!
-      </p>
-      <div class="d-inline-flex gap-2 mb-5 ">
-        <a class="btn btn-primary btn-lg mt-1"
-          href="{% url 'learning_logs:topics' %}">START NOW &raquo;</a>
-          <svg class="bi ms-2" width="24" height="24"><use xlink:href="#arrow-right-short"/></svg>
-        </button>
-      </div>
+  <div class="container my-5 ">
+    <div class="p-5 text-center bg-body-tertiary rounded-3 bg-E64833 ">
+        <h1 class="text-body-emphasis">GET STARTED</h1>
+        <p class="col-lg-8 mx-auto fs-5 text-white ">
+            Make the first step to <code style="color: navy;"> clear your mind </code>; happy journaling!
+        </p>
+        <div class="d-inline-flex gap-2 mb-5">
+            <a class="btn btn-primary btn-lg mt-1" href="{% url 'learning_logs:topics' %}">START NOW &raquo;</a>
+            <svg class="bi ms-2" width="24" height="24"><use xlink:href="#arrow-right-short"/></svg>
+        </div>
     </div>
-  </div>
+</div>
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-050A44 rounded-3">
+    <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-dark text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-white">&copy; 2025 product of Lémen Ltd by Shen Lee Osialai</span>
+    </div>
+</footer>
+</div>
+
 
 </main>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
     <script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-white text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-            </a>
-            <span class="mb-3 mb-md-0 text-white">&copy; 2025 product of Lémen Ltd by Shen Lee Osialai</span>
-        </div>
-    </footer>
-    </div>
+    
 </body>
 {% endblock page_header %}

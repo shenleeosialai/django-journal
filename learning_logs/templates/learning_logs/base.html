@@ -8,10 +8,16 @@
   {% load django_bootstrap5 %}
   {% bootstrap_css %}
   {% bootstrap_javascript %}
+  <style>
+    .bg-EDC7B7 {
+  background-color: #EDC7B7;
+}
+
+  </style>
 
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark text-white mb-4 border">
+  <nav class="navbar navbar-expand-md navbar-white bg-EDC7B7 text-black mb-4 border">
     <div class="container-fluid " >
       <a class="navbar-brand" href="{% url 'learning_logs:index' %}">
           JARIDA</a>
