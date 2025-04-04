@@ -6,7 +6,6 @@ The project emphasizes key Django concepts like models, views, templates, and us
 ![jaridaregister](https://github.com/user-attachments/assets/6d836007-18b4-437a-981c-b1e3ba799e6c)
 ![jarida ](https://github.com/user-attachments/assets/8642c635-52d3-4308-8a00-d5e6acf5e344)
 ![jarida1](https://github.com/user-attachments/assets/d1241baf-8280-4614-a848-f78368904ea9)
-![jaridaregister](https://github.com/user-attachments/assets/13342986-65d0-4bca-bf9b-308c0b2f4b7c)
 ![jarida2](https://github.com/user-attachments/assets/2b055776-fc12-430c-bbff-ec117ad600ef)
 ![topics jarida](https://github.com/user-attachments/assets/91fc12df-c555-4844-a9f2-2eee5c4df1ea)
 ![jarida entry](https://github.com/user-attachments/assets/f333f546-5ea3-4e82-a24a-be923a206bd6)
