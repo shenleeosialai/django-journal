@@ -1,9 +1,18 @@
 {% extends "learning_logs/base.html" %}
 {% block content %}
- <p>Add a new topic:</p>
- <form action="{% url 'learning_logs:new_topic' %}" method='post'>
-    {% csrf_token %}
-    {{ form.as_div }}
-    <button name="submit">Add topic</button>
- </form>
+<div style="max-width: 600px; margin: 2em auto; font-family: Arial, sans-serif; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 2em; background: #f9f9f9;">
+    <h2 style="text-align: center; color: #333;">Add a New Topic</h2>
+
+    <hr style="border: 0; border-top: 1px solid #ccc; margin: 1.5em 0;">
+
+    <form action="{% url 'learning_logs:new_topic' %}" method='post' style="display: flex; flex-direction: column; gap: 1em;">
+        {% csrf_token %}
+        <div style="margin-bottom: 1em;">
+            {{ form.as_div }}
+        </div>
+        <button name="submit" style="padding: 0.8em; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">
+            Add Topic
+        </button>
+    </form>
+</div>
 {% endblock content %}

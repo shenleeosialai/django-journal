@@ -1,26 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Learning Log</title>
+  {% load static %}
+  <title>jarida</title>
+  <link rel="icon" href="{% static 'images/jarida.png' %}">
 
   {% load django_bootstrap5 %}
   {% bootstrap_css %}
   {% bootstrap_javascript %}
+  {% load static %}
   <style>
     .bg-EDC7B7 {
-  background-color: #EDC7B7;
-}
-
+      background-color: #0D19A3;
+    }
   </style>
 
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-white bg-EDC7B7 text-black mb-4 border">
-    <div class="container-fluid " >
+  <nav class="navbar navbar-expand-md navbar-white bg-EDC7B7 text-white mb-4 border">
+    <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'learning_logs:index' %}">
-          JARIDA</a>
+        <img src="{% static 'images/jarida.png' %}" alt="JARIDA Logo" width="100" height="100" class="d-inline-block align-text-top">
+      </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
@@ -29,7 +30,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 ">
           <li class="nav-item">
             <a class="nav-link" href="{% url 'learning_logs:topics' %}">
               Topics</a></li>

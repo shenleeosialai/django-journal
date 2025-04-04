@@ -1,22 +1,28 @@
 {% extends 'learning_logs/base.html' %}
 
+
 {% block page_header %}
-  <h1>Topics</h1>
+  <h1 style="text-align: center; font-family: Arial, sans-serif; color: white;">Topics</h1>
 {% endblock page_header %}
 
 {% block content %}
-
-  <ul class="list-group border-bottom pb-2 mb-4">
+  <ul class="list-group border-bottom pb-2 mb-4" style="max-width: 600px; margin: 2em auto; padding: 0; list-style: none; font-family: Arial, sans-serif;">
     {% for topic in topics %}
-      <li class="list-group-item border-0">
-        <a href="{% url 'learning_logs:topic' topic.id %}">
+      <li class="list-group-item border-0" style="border-bottom: 1px solid #ddd; padding: 1em 0;">
+        <a href="{% url 'learning_logs:topic' topic.id %}" style="text-decoration: none; color: #065d7b; font-size: 1.1em;">
           {{ topic.text }}</a>
       </li>
     {% empty %}
-      <li class="list-group-item border-0">No topics have been added yet.</li>
+      <li class="list-group-item border-0" style="text-align: center; color: #B0C4DE; padding: 1em;">
+        No topics have been added yet.
+      </li>
     {% endfor %}
   </ul>
 
-  <a href="{% url 'learning_logs:new_topic' %}">Add a new topic</a>
-
+  <div style="text-align: center; margin-top: 2em;">
+    <a href="{% url 'learning_logs:new_topic' %}" style="padding: 0.8em 1.5em; background: #00BFFF; color: white; text-decoration: none; border-radius: 5px; font-family: Arial, sans-serif; font-size: 1em; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      Add a new topic
+    </a>
+  </div>
+</div>
 {% endblock content %}

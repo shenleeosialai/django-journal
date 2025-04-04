@@ -1,28 +1,39 @@
 {% extends 'learning_logs/base.html' %}
 
 {% block page_header %}
-  <h1>{{ topic.text }}</h1>
+  <h1 style="text-align: center; font-family: Arial, sans-serif; color: #333; margin-bottom: 1em;">
+    {{ topic.text }}
+  </h1>
 {% endblock page_header %}
-
+{% load static %}
 {% block content %}
 
-  <p>
-    <a href="{% url 'learning_logs:new_entry' topic.id %}">Add new entry</a>
-  </p>
+  <div style="text-align: center; margin-bottom: 2em;">
+    <a href="{% url 'learning_logs:new_entry' topic.id %}" style="padding: 0.8em 1.5em; background: #007BFF; color: white; text-decoration: none; border-radius: 5px; font-family: Arial, sans-serif; font-size: 1em; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      Add New Entry
+    </a>
+  </div>
 
   {% for entry in entries %}
-    <div class="card mb-3">
+    <div class="card mb-3" style="max-width: 700px; margin: 1.5em auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden; font-family: Arial, sans-serif;">
       <!-- Card header with timestamp and edit link -->
-      <h4 class="card-header">
+      <h4 class="card-header" style="background: #007BFF; color: white; padding: 1em; font-size: 1.2em; display: flex; justify-content: space-between; align-items: center;">
         {{ entry.date_added|date:'M d, Y H:i' }}
-        <small><a href="{% url 'learning_logs:edit_entry' entry.id %}">
-          edit entry</a></small>
+        <small>
+          <a href="{% url 'learning_logs:edit_entry' entry.id %}" style="color: white; text-decoration: underline; font-size: 0.9em;">
+            Edit Entry
+          </a>
+        </small>
       </h4>
       <!-- Card body with entry text -->
-      <div class="card-body">{{ entry.text|linebreaks }}</div>
+      <div class="card-body" style="padding: 1.5em; color: #333; background: #f9f9f9; line-height: 1.6;">
+        {{ entry.text|linebreaks }}
+      </div>
     </div>
   {% empty %}
-    <p>There are no entries for this topic yet.</p>
+    <p style="text-align: center; font-family: Arial, sans-serif; color: #555; margin-top: 2em;">
+      There are no entries for this topic yet.
+    </p>
   {% endfor %}
 
 {% endblock content %}
