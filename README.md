@@ -1,6 +1,6 @@
 Jarida in this repository is a web application built using Django that allows users to record and track their progress/thoughts on various topics.
 Users can create entries for specific topics, edit them, and view them in an organized manner. 
-The project emphasizes key Django concepts like models, views, templates, and user authentication, making it an excellent introduction to building functional web applications.
+The project emphasizes key Django concepts like models, views, templates, and user authentication, making it an excellent introduction to building functional web applications
 
 
 ![jarida log in](https://github.com/user-attachments/assets/6bb7af56-8cdb-473d-b896-02da56d5fbab)
